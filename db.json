@@ -1,0 +1,24 @@
+{
+  "books": [
+    {
+      "name": "Introduction to Redux",
+      "price": 20,
+      "id": 1
+    },
+    {
+      "name": "cebolla",
+      "price": "12",
+      "id": 7
+    },
+    {
+      "name": "cebolla",
+      "price": "111",
+      "id": 9
+    },
+    {
+      "name": "cebolla",
+      "price": "111",
+      "id": 10
+    }
+  ]
+}
