@@ -1,24 +1,26 @@
 import React from 'react'
 
-const EditProduct = () => {
+const EditProduct = ( { product } ) => {
     return (
-        <form action="">
-            <div class="form-group">
-              <label for="">Name</label>
-              <input type="text"
-                class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              <small id="helpId" class="form-text text-muted">Help text</small>
+        <form>
+            <div className="form-row align-items-center">
+                <div className="col-auto">
+                    <label className="sr-only" htmlFor="name">Name</label>
+                    <input type="text" className="form-control mb-2" id="name" placeholder="" 
+                        value={ product.name }    
+                    />
+                </div>
+                <div className="col-auto">
+                    <label className="sr-only" htmlFor="price">Price</label>
+                    <input type="number" className="form-control" id="price" placeholder="" 
+                        value={ product.price }
+                    />
+                </div>
+                <div className="col-auto">
+                    <button type="submit" className="btn btn-danger mb-2">Update</button>
+                </div>
             </div>
         </form>
-
-        <tr>
-            <td>{ product.name }</td>
-            <td>{ product.price }</td>
-            <td>
-                <Link to={`/product/edit/${product.id}`} className="btn btn-warning p-0 px-2 mx-2">Edit</Link>
-                <button className="btn btn-danger p-0 px-2 mx-2" onClick={ () => deleteProduct( product.id ) }>Delete</button>
-            </td>
-        </tr>
     )
 }
 
